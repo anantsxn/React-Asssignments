@@ -1,7 +1,7 @@
-import Axios from "axios";
-import React, { Component } from "react";
-import ToastMessage from "../../components/toast/toast";
-import "./login.css";
+import Axios from 'axios';
+import React, { Component } from 'react';
+import ToastMessage from '../../components/toast/toast';
+import './login.scss';
 
 class Login extends Component {
   constructor(props) {
@@ -9,14 +9,14 @@ class Login extends Component {
     this.state = {
       // trupti.kashid@objectedge.com
       // Objectedge$10
-      toastMessage: "",
+      toastMessage: '',
       showToast: false
     };
   }
 
   validate() {
     const { name, pass } = this.nameChange();
-    if (name === "" || pass === "") {
+    if (name === '' || pass === '') {
       this.spaceToast();
     } else {
       this.validation(name, pass);
@@ -27,7 +27,7 @@ class Login extends Component {
   spaceToast() {
     setTimeout(() => {
       this.setState({
-        toastMessage: "All fields required!!",
+        toastMessage: 'All fields required!!',
         showToast: true
       });
     }, 500);
@@ -43,12 +43,12 @@ class Login extends Component {
   }
 
   spaceInvalid(regExUser, regExPass) {
-    let field = "";
+    let field = '';
     if (!regExUser) {
-      field = "Username";
+      field = 'Username';
     }
     if (!regExPass) {
-      field = "Password";
+      field = 'Password';
     }
     setTimeout(() => {
       this.setState({
@@ -65,42 +65,46 @@ class Login extends Component {
   }
 
   regExValidation(name, pass) {
-    const regExUser = /^\S*$/.test(name);
-    const regExPass = /^\S*$/.test(pass);
+    const regex = /^\S*$/;
+    const regExUser = regex.test(name);
+    const regExPass = regex.test(pass);
     return { regExUser, regExPass };
   }
 
   handleClick() {
     Axios({
-      method: "post",
+      method: 'post',
       url:
-        "https://dev-bepsy-api.objectedge.com/oe_commerce_api/occ/v1/oauth/login",
+        'https://dev-bepsy-api.objectedge.com/oe_commerce_api/occ/v1/oauth/login',
       data: {
         username: this.userName.value, // trupti.kashid@objectedge.com
         password: this.passWord.value // Objectedge$10
       },
       headers: {
-        authorization: "Bearer YWRtaW46YWRtaW4=",
-        "content-type": "application/json"
+        authorization: 'Bearer YWRtaW46YWRtaW4=',
+        'content-type': 'application/json'
       }
     })
       .then(() => {
-        this.setState({ toastMessage: "User is Authorised!" });
-        this.setState({ showToast: true });
+        this.setState(
+          { toastMessage: 'User is Authorised!' },
+          { showToast: true }
+        );
       })
       .catch(() => {
-        this.setState({ toastMessage: "User is unauthorized" });
-        this.setState({ showToast: true });
+        this.setState(
+          { toastMessage: 'User is unauthorized' },
+          { showToast: true }
+        );
       });
     this.setState({ showToast: false });
   }
 
   render() {
+    const { state } = this;
     return (
       <div>
-        {this.state.showToast ? (
-          <ToastMessage message={this.state.toastMessage} />
-        ) : null}
+        {state.showToast ? <ToastMessage message={state.toastMessage} /> : null}
         <div className="split left center">
           <div>
             <div>

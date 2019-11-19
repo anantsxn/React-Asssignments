@@ -1,5 +1,5 @@
 import React from 'react';
-import './toast.css';
+import './toast.scss';
 
 const ToastMessage = ({ message }) => {
   return <div className="toasted">{message}</div>;

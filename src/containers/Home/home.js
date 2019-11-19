@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Axios from 'axios';
 import Carousel from '../../components/carousel/carousel';
+import './home.scss';
 
 class Home extends Component {
   constructor(props) {
