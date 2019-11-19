@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Axios from 'axios';
-import Carousel from '../carousel/carousel';
+import Carousel from '../../components/carousel/carousel';
 
 class Home extends Component {
   constructor(props) {
@@ -28,12 +28,9 @@ class Home extends Component {
   }
 
   render() {
+    const { products } = this.state;
     return (
-      <div>
-        {this.state.products.length > 0 ? (
-          <Carousel products={this.state.products} />
-        ) : null}
-      </div>
+      <div>{products.length > 0 ? <Carousel products={products} /> : null}</div>
     );
   }
 }
