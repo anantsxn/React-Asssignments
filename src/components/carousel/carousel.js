@@ -23,7 +23,7 @@ class Carousel extends Component {
 
   rightShift = () => {
     const { products } = this.props;
-    if (this.left > -((products.length - 3) * 320)) {
+    if (this.left > -((products.length - 4) * 320)) {
       this.left = this.left - 320;
     }
     this.listOfCards.style.left = `${this.left}px`;

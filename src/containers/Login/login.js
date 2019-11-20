@@ -81,20 +81,24 @@ class Login extends Component {
         password: this.passWord.value // Objectedge$10
       },
       headers: {
-        authorization: 'Bearer YWRtaW46YWRtaW4=',
+        'Authorization': 'Bearer YWRtaW46YWRtaW4=',
         'content-type': 'application/json'
       }
     })
       .then(() => {
         this.setState(
-          { toastMessage: 'User is Authorised!' },
-          { showToast: true }
+          {
+            toastMessage: 'User is Authorised!',
+            showToast: true
+          }
         );
       })
       .catch(() => {
         this.setState(
-          { toastMessage: 'User is unauthorized' },
-          { showToast: true }
+          {
+            toastMessage: 'User is unauthorized',
+            showToast: true
+          }
         );
       });
     this.setState({ showToast: false });

@@ -1,10 +1,9 @@
 import React from 'react';
 import './App.scss';
-import Home from './containers/Home/home';
-// import Login from "./containers/Login/login";
+import Route from './components/routing/routing';
 
 function App() {
-  return <Home />;
+  return <Route />;
 }
 
 export default App;

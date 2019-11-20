@@ -8,7 +8,7 @@
     border-radius   : 2px;
     padding         : 16px;
     position        : fixed;
-    z-index         : 2;
+    z-index         : 7;
     left            : 50%;
     bottom          : 100%;
     font-size       : 15px;
@@ -22,7 +22,7 @@
     }
 
     to {
-        bottom : 95%;
+        bottom : 90%;
         opacity: 1;
     }
 }

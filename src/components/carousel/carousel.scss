@@ -1,41 +1,42 @@
 .carousel-css {
-    position: relative;
+  position: relative;
+  top: 50px;
 }
 
 .carouselCards {
-    position : relative;
-    width    : 61%;
-    top      : 50%;
-    left     : 54%;
-    transform: translate(-50%, 10px);
-    overflow : hidden;
-    height   : 330px;
+  position: relative;
+  width: 76%;
+  top: 50%;
+  left: 54%;
+  transform: translate(-50%, 10px);
+  overflow: hidden;
+  height: 330px;
 }
 
 .listOfCards {
-    position: absolute;
-    overflow: hidden;
-    height  : 100%;
-    left    : 0;
+  position: absolute;
+  overflow: hidden;
+  height: 100%;
+  left: 0;
 }
 
 .btn {
-    width           : 100px;
-    padding         : 10px;
-    background-color: rgb(255, 255, 255);
-    border-radius   : 20px;
-    text-align      : center;
-    cursor          : pointer;
-    position        : absolute;
-    top             : 40%;
-    font-size       : 44px;
-    color           : #a39f9f;
+  width: 100px;
+  padding: 10px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 20px;
+  text-align: center;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  font-size: 22px;
+  color: #a39f9f;
 }
 
 .left {
-    left: 18%;
+  left: 300px;
 }
 
 .right {
-    right: 20%;
+  right: 360px;
 }
