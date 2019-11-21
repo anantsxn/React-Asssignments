@@ -4,6 +4,7 @@ import NavigationBar from '../navigation bar/navigation';
 import Home from '../../containers/Home/home';
 import Login from '../../containers/Login/login';
 import Product from '../../containers/PLP/product';
+import SearchResultsPage from '../../containers/SearchResult/searchresultsPage';
 
 const navLinks = [
   {
@@ -20,6 +21,11 @@ const navLinks = [
     id: '3',
     navLink: '/product',
     navName: 'Products'
+  },
+  {
+    id: '4',
+    navLink: '/searchProducts',
+    navName: 'SearchResultsPage'
   }
 ];
 
@@ -30,6 +36,7 @@ const Routing = () => {
       <Route exact path="/" component={Home} />
       <Route path="/login" component={Login} />
       <Route path="/product" component={Product} />
+      <Route path="/searchproducts" component={SearchResultsPage} />
     </Router>
   );
 };

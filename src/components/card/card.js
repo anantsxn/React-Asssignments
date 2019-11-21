@@ -3,6 +3,7 @@ import './card.scss';
 
 const card = props => {
   const { product } = props;
+  console.table(product);
   return (
     <div className="card">
       <img
