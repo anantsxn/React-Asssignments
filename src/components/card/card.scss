@@ -1,0 +1,31 @@
+.card {
+    box-shadow    : 0 4px 4px 0 rgba(0, 0, 0, 0.2);
+    transition    : 0.3s;
+    width         : 300px;
+    border-radius : 5px;
+    display       : inline-block;
+    margin        : 0 10px 16px 10px;
+    padding-bottom: 5px;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.image {
+    border-radius: 5px 5px 0 0;
+}
+
+.pad {
+    padding: 5px;
+}
+
+.button-css {
+    margin-left     : 32%;
+    height          : 30px;
+    background-color: #2d0ce4;
+    color           : white;
+    border          : transparent;
+    border-radius   : 4px;
+    font-weight     : bold;
+}

@@ -1,0 +1,48 @@
+.split {
+  height: 100%;
+  width: 50%;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+}
+
+.left {
+  left: 0;
+}
+
+.right {
+  right: 0;
+  overflow: hidden;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image {
+  overflow: hidden;
+  background-image: url('../../assets/fbi.jpg');
+  background-size: cover;
+  background-position: center;
+  top: 44px;
+}
+
+.box {
+  border-radius: 2px;
+  border-width: 1px;
+  border-color: black;
+  width: 120%;
+}
+
+.sub {
+  background-color: #ef3535;
+  width: 100px;
+  font-size: 19px;
+  font-weight: bold;
+  color: white;
+  border-radius: 4px;
+  border: hidden;
+  margin-top: 5px;
+}
